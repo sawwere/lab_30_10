@@ -31,6 +31,18 @@ void LaterInYear(int m1, int d1, int m2, int d2)
 	}
 }
 
+int DaysInYear(int year)
+{
+	return IsLeapYear(year) ? 366 : 365;
+}
+
+int DaysInYearRange(int year1, int year2)
+{
+	int res = 0;
+	for (int i = year1; i <= year2; i++)
+		res += DaysInYear(i);
+	return res;
+}
 
 int main()
 {
